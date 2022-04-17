@@ -19,7 +19,7 @@ function RoseLibrary:Tween(o, p, d, ...)
 	tween:Create(o, tweeninfo(d, ...), p):Play()
 end
 
-function RoseLibrary:Load(n, p, l)
+function RoseLibrary:Load(n, p)
 	n = n or "UnnamedLibrary"
 	p = p or false
 	RoseLibrary.MainName = n
@@ -43,6 +43,7 @@ function RoseLibrary:Load(n, p, l)
 	local RoseLib = Instance.new("ScreenGui")
 	RoseLib.Parent = game.CoreGui
 	RoseLib.ResetOnSpawn = false
+	RoseLib.Name = RoseLibrary.MainName
 	
 	local main = Instance.new("Frame")
 	main.Name = "main"
