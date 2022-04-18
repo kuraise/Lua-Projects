@@ -336,9 +336,9 @@ function RoseLibrary:Load(n, p)
 	local Tabs = {}
 	Tabs.First = true
 	
-	function Tabs:CreateTab()
+	function Tabs:CreateTab(tName)
 		local tabButton = Instance.new("Frame")
-		tabButton.Name = "tabButton"
+		tabButton.Name = tName
 		tabButton.AnchorPoint = Vector2.new(0.5, 0.5)
 		tabButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		tabButton.BackgroundTransparency = 1
@@ -365,7 +365,7 @@ function RoseLibrary:Load(n, p)
 		local tabText = Instance.new("TextLabel")
 		tabText.Name = "tabText"
 		tabText.Font = Enum.Font.SourceSansBold
-		tabText.Text = "Unfocused Tab"
+		tabText.Text = tName
 		tabText.TextColor3 = Color3.fromRGB(255, 255, 255)
 		tabText.TextScaled = true
 		tabText.TextSize = 16
