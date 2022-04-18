@@ -440,7 +440,7 @@ function RoseLibrary:Load(n, p)
 		
 		if Tabs.First then
 			RoseLibrary:Tween(interact, {BackgroundColor3 = Color3.fromRGB(47, 50, 56)}, .3)
-			icon:TweenPosition(UDim2.new(0.139, 0.5), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, .3)
+			icon:TweenPosition(UDim2.new(0.139,0, 0.5,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, .3)
 			RoseLibrary:Tween(icon, {ImageColor3 = Color3.fromRGB(86, 196, 255)}, .3)
 			wait(0.1)
 			tip:TweenSize(UDim2.new(0.047, 0, 0.698, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, .3)
