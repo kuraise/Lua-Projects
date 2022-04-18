@@ -445,6 +445,7 @@ function RoseLibrary:Load(n, p)
 			RoseLibrary:Tween(icon, {ImageColor3 = Color3.fromRGB(86, 196, 255)}, .3)
 			wait(0.1)
 			tip:TweenSize(UDim2.new(0.047, 0, 0.698, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, .3)
+            Tabs.First = false
 		end
 	end
 	return Tabs
