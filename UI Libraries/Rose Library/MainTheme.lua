@@ -405,10 +405,10 @@ function RoseLibrary:Load(n, p)
 			Tabs.First = false
 		end
 		
-		for y,e in pairs(ItemControl:GetChildren()) do
-			if e:IsA("Frame") and e.Name == "Holder" then
+		for y,e in pairs(ItemControl.Holder:GetChildren()) do
+			if e:IsA("Frame") then
 				e.Interact.MouseButton1Click:Connect(function()
-					for k,j in pairs(ItemControl:GetChildren()) do
+					for k,j in pairs(ItemControl.Holder:GetChildren()) do
 						if j:IsA("Frame") then
 							if j.Name ~= e.Name then
 								Tip_2:TweenSize(UDim2.new(0,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, .3)
@@ -418,7 +418,7 @@ function RoseLibrary:Load(n, p)
 								Icon_2:TweenPosition(UDim2.new(0.1, 0,0.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, .3)
 								RoseLibrary:Tween(Interact_2, {BackgroundColor3 = Color3.fromRGB(30, 32, 36)}, .3)
 							else
-								for rat, s in pairs(ItemControl:GetChildren()) do
+								for rat, s in pairs(ItemControl.Holder:GetChildren()) do
 									if s:IsA("Frame") and s.Name ~= e.Name then
 										RoseLibrary:Tween(s.Interact, {BackgroundColor3 = Color3.fromRGB(47, 50, 56)}, .3)
 										s.Icon:TweenPosition(UDim2.new(0.139, 0,0.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, .3)
