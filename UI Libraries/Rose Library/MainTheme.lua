@@ -315,7 +315,7 @@ function RoseLibrary:Load(n, p)
 		tName = tName or "Unnamed Button"
 		local TabButton = Instance.new("Frame")
 		
-		TabButton.Name = "TabButton"
+		TabButton.Name = tName
 		TabButton.Parent = Holder
 		TabButton.AnchorPoint = Vector2.new(0.5, 0.5)
 		TabButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -336,7 +336,7 @@ function RoseLibrary:Load(n, p)
 
 		UIAspectRatioConstraint_9.Parent = Icon_2
 
-		TabText_2.Name = tName
+		TabText_2.Name = "TabText"
 		TabText_2.Parent = TabButton
 		TabText_2.AnchorPoint = Vector2.new(0.5, 0.5)
 		TabText_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
