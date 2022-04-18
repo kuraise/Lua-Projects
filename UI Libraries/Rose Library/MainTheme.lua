@@ -439,6 +439,7 @@ function RoseLibrary:Load(n, p)
 		tip.Parent = tabButton
 		
 		if Tabs.First then
+			wait(0.3)
 			RoseLibrary:Tween(interact, {BackgroundColor3 = Color3.fromRGB(47, 50, 56)}, .3)
 			icon:TweenPosition(UDim2.new(0.139,0, 0.5,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, .3)
 			RoseLibrary:Tween(icon, {ImageColor3 = Color3.fromRGB(86, 196, 255)}, .3)
