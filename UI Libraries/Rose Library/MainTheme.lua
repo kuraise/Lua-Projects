@@ -306,6 +306,8 @@ function RoseLibrary:Load(n, p)
 	UIAspectRatioConstraint_20.Parent = Main
 	UIAspectRatioConstraint_20.AspectRatio = 1.052
 	
+	RoseLibrary:Drag(HeadControl, Main)
+	
 	local Tabs = {}
 	Tabs.First = true
 	
@@ -393,6 +395,7 @@ function RoseLibrary:Load(n, p)
 		UIAspectRatioConstraint_12.AspectRatio = 0.364
 		
 		if Tabs.First then
+			wait(0.5)
 			RoseLibrary:Tween(Interact_2, {BackgroundColor3 = Color3.fromRGB(47, 50, 56)}, .3)
 			Icon_2:TweenPosition(UDim2.new(0.139, 0,0.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, .3)
 			RoseLibrary:Tween(Icon_2, {ImageColor3 = Color3.fromRGB(86, 196, 255)}, .3)
