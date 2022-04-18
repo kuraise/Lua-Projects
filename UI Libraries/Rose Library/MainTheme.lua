@@ -403,7 +403,7 @@ function RoseLibrary:Load(n, p)
 		end
 		
 		for y,e in pairs(ItemControl:GetChildren()) do
-			if e:IsA("Frame") then
+			if e:IsA("Frame") and e.Name == "Holder" then
 				e.Interact.MouseButton1Click:Connect(function()
 					for k,j in pairs(ItemControl:GetChildren()) do
 						if j:IsA("Frame") then
