@@ -443,6 +443,7 @@ function RoseLibrary:Load(n, p)
 		
 		if Tabs.First then
 			Tabs.First = false
+			task.wait(0.3)
 			RoseLibrary:Tween(Interact_2, {BackgroundColor3 = Color3.fromRGB(47, 50, 56)}, .3)
 			Icon_2:TweenPosition(UDim2.new(0.139, 0,0.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, .3)
 			RoseLibrary:Tween(Icon_2, {ImageColor3 = Color3.fromRGB(86, 196, 255)}, .3)
