@@ -130,7 +130,8 @@ function RoseLibrary:Load(n, p)
 	
 	MStroke.Parent = Main
 	MStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-	MStroke.Color = Color3.fromRGB()
+	MStroke.Color = Color3.fromRGB(86, 196, 255)
+	MStroke.Thickness = 1.5
 
 	UICorner.CornerRadius = UDim.new(0, 5)
 	UICorner.Parent = Main
@@ -215,6 +216,7 @@ function RoseLibrary:Load(n, p)
 
 	Holder.Name = "Holder"
 	Holder.Parent = ItemControl
+	Holder.ScrollBarImageColor3 = Color3.fromRGB(86, 196, 255)
 	Holder.Active = true
 	Holder.AnchorPoint = Vector2.new(0.5, 0.5)
 	Holder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -245,7 +247,7 @@ function RoseLibrary:Load(n, p)
 	HeadControl.Size = UDim2.new(0.999999881, 0, 0.125647873, 0)
 	HeadControl.ZIndex = 999999999
 
-	Name.Name = "Name"
+	Name.Name = "MainName"
 	Name.Parent = HeadControl
 	Name.AnchorPoint = Vector2.new(0.5, 0.5)
 	Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -325,6 +327,7 @@ function RoseLibrary:Load(n, p)
 	
 	function Tabs:CreateTab(tName)
 		tName = tName or "Unnamed Button"
+		
 		local TabButton = Instance.new("Frame")
 		
 		TabButton.Name = tName
@@ -414,7 +417,7 @@ function RoseLibrary:Load(n, p)
 							if j:IsA("Frame") then
 								if j.Name ~= e.Name then
 									Tip_2:TweenSize(UDim2.new(0,0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, .3)
-									wait(0.1)
+									task.wait(0.1)
 									TabText_2:TweenPosition(UDim2.new(0.57, 0,0.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, .3)
 									RoseLibrary:Tween(Icon_2, {ImageColor3 = Color3.fromRGB(255, 255, 255)}, .3)
 									Icon_2:TweenPosition(UDim2.new(0.1, 0,0.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, .3)
@@ -426,7 +429,7 @@ function RoseLibrary:Load(n, p)
 											s.Icon:TweenPosition(UDim2.new(0.139, 0,0.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, .3)
 											RoseLibrary:Tween(s.Icon, {ImageColor3 = Color3.fromRGB(86, 196, 255)}, .3)
 											s.TabText:TweenPosition(UDim2.new(0.617, 0,0.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, .3)
-											wait(0.1)
+											task.wait(0.1)
 											s.Tip:TweenSize(UDim2.new(0.047, 0,0.698, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, .3)
 										end
 									end
@@ -439,12 +442,11 @@ function RoseLibrary:Load(n, p)
 		end
 		
 		if Tabs.First then
-			wait(0.5)
 			RoseLibrary:Tween(Interact_2, {BackgroundColor3 = Color3.fromRGB(47, 50, 56)}, .3)
 			Icon_2:TweenPosition(UDim2.new(0.139, 0,0.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, .3)
 			RoseLibrary:Tween(Icon_2, {ImageColor3 = Color3.fromRGB(86, 196, 255)}, .3)
 			TabText_2:TweenPosition(UDim2.new(0.617, 0,0.5, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, .3)
-			wait(0.1)
+			task.wait(0.1)
 			Tip_2:TweenSize(UDim2.new(0.047, 0,0.698, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, .3)
 			Tabs.First = false
 		end
