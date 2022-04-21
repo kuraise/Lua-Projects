@@ -113,6 +113,7 @@ function RoseLibrary:Load(n, p)
 	local Line_2 = Instance.new("Frame")
 	local UIAspectRatioConstraint_19 = Instance.new("UIAspectRatioConstraint")
 	local UIAspectRatioConstraint_20 = Instance.new("UIAspectRatioConstraint")
+	local MStroke = Instance.new("UIStroke")
 
 	RoseLib.Name = n
 	RoseLib.Parent = game.CoreGui
@@ -126,6 +127,10 @@ function RoseLibrary:Load(n, p)
 	Main.Position = UDim2.new(0.499739647, 0, 0.539928496, 0)
 	Main.Size = UDim2.new(0.243229166, 0, 0.529201448, 0)
 	Main.ZIndex = 999999999
+	
+	MStroke.Parent = Main
+	MStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	MStroke.Color = Color3.fromRGB()
 
 	UICorner.CornerRadius = UDim.new(0, 5)
 	UICorner.Parent = Main
